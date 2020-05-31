@@ -1,5 +1,6 @@
 # Wallpaper-App
-I used Unspplash API.
+I used Unsplash API.
+All photos are free to download and use under the Unsplash License.
 
 <img src="https://github.com/barissaglam/Wallpaper-App/blob/master/images/ss.png" width="220" height="440">
 
