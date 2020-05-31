@@ -1,0 +1,2 @@
+rootProject.name='Wallpaper App'
+include ':app'

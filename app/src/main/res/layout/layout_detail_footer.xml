@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="barissaglam.client.wallpaperapp.presentation.detail.PhotoDetailFragmentViewState" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_dialog"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingStart="@dimen/_16dp"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/layout_detail_peek_height"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/imageViewArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDownload"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:enabled="@{viewState.viewsEnabled()}"
+            android:gravity="center"
+            android:text="@string/button_download"
+            android:textColor="@color/white"
+            app:rippleColor="@color/colorPrimary"
+            app:fontFamily="@font/font_bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewArrow" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@color/colorLine"
+            app:layout_constraintTop_toBottomOf="@id/buttonDownload" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSet"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:enabled="@{viewState.viewsEnabled()}"
+            android:gravity="center"
+            android:text="@string/button_set"
+            android:textColor="@color/white"
+            app:rippleColor="@color/colorPrimary"
+            app:fontFamily="@font/font_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/imageViewArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+            android:gravity="center_vertical"
+            android:text="@string/title_information"
+            android:textColor="@color/gray9B"
+            app:drawableTint="@color/gray9B"
+            app:layout_constraintTop_toBottomOf="@id/viewLine" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewOwnerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_owner"
+            android:textColor="@color/white"
+            app:fontFamily="@font/font_medium"
+            app:layout_constraintStart_toStartOf="@id/textViewInfoTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewInfoTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@{viewState.data.photoOwnerName}"
+            android:textColor="@color/whiteSec"
+            app:layout_constraintBottom_toBottomOf="@id/textViewOwnerTitle"
+            app:layout_constraintStart_toEndOf="@id/textViewOwnerTitle"
+            app:layout_constraintTop_toTopOf="@id/textViewOwnerTitle"
+            tools:text="Barış Sağlam" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/title_profile"
+            android:textColor="@color/white"
+            app:fontFamily="@font/font_medium"
+            app:layout_constraintStart_toStartOf="@id/textViewInfoTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewOwnerTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@{viewState.data.photoOwnerProfile}"
+            android:textColor="@color/whiteSec"
+            app:layout_constraintBottom_toBottomOf="@id/textViewProfileTitle"
+            app:layout_constraintStart_toEndOf="@id/textViewProfileTitle"
+            app:layout_constraintTop_toTopOf="@id/textViewProfileTitle"
+            tools:text="https://api.unsplash.com/users/baris" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLicenseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/title_license"
+            android:textColor="@color/white"
+            app:fontFamily="@font/font_medium"
+            app:layout_constraintStart_toStartOf="@id/textViewInfoTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewProfileTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@{viewState.data.license}"
+            android:textColor="@color/whiteSec"
+            tools:text="Unsplash License"
+            app:layout_constraintBottom_toBottomOf="@id/textViewLicenseTitle"
+            app:layout_constraintStart_toEndOf="@id/textViewLicenseTitle"
+            app:layout_constraintTop_toTopOf="@id/textViewLicenseTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewSourceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/title_source"
+            android:textColor="@color/white"
+            app:fontFamily="@font/font_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewInfoTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewLicenseTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@{viewState.data.source}"
+            android:textColor="@color/whiteSec"
+            tools:text="http://unsplash.com/asdsad/asdasd/asd"
+            app:layout_constraintBottom_toBottomOf="@id/textViewSourceTitle"
+            app:layout_constraintStart_toEndOf="@id/textViewSourceTitle"
+            app:layout_constraintTop_toTopOf="@id/textViewSourceTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

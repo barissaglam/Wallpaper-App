@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="photo"
+            type="barissaglam.client.wallpaperapp.data.viewitem.PhotoViewItem" />
+    </data>
+
+
+    <ImageView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_4dp"
+        android:layout_marginStart="@dimen/_4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/temp"
+        app:imageUrl="@{photo.photoUrl}"
+        tools:layout_height="180dp" />
+</layout>

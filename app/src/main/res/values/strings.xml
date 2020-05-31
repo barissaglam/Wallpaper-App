@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Wallpaper App</string>
+
+    <!-- Error -->
+    <string name="error_unknown">We are unable to complete your request now. Please try again later!</string>
+    <string name="error_connection_not_found">Please check your connection settings and try again.</string>
+    <string name="error_connection_timeout">Connection timed out!</string>
+    <string name="title_home">Wallpaper App</string>
+    <string name="description_home">All photos are free to download and use under the Unsplash License.</string>
+    <string name="title_source">Source:</string>
+    <string name="title_license">License:</string>
+    <string name="title_profile">Profile:</string>
+    <string name="title_owner">Owner:</string>
+    <string name="title_information">Information</string>
+    <string name="button_set">SET</string>
+    <string name="button_download">DOWNLOAD</string>
+    <string name="photo_downloading">Photo is downloading…</string>
+    <string name="error_no_permission">You have to allow it to continue.</string>
+    <string name="not_supported_set_wallpaper">Not supported to apply wallpaper.</string>
+    <string name="download_success">Download is successful.</string>
+    <string name="downloaded">Downloaded %s</string>
+    <string name="you_have_no_fav">You have no favorites!</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="wallpaper_applied">Wallpaper is applied.</string>
+</resources>

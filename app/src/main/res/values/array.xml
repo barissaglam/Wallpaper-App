@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="wallpaper_download_options" type="string">
+        <item>Small</item>
+        <item>Regular</item>
+        <item>Full</item>
+        <item>Raw</item>
+    </array>
+</resources>

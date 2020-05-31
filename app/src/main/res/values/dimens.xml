@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSizeSmall">12sp</dimen>
+    <dimen name="textSizeNormal">14sp</dimen>
+    <dimen name="textSizeMedium">16sp</dimen>
+    <dimen name="textSizeLarge">18sp</dimen>
+    <dimen name="textSizeXLarge">20sp</dimen>
+    <dimen name="textSizeBigTitle">35sp</dimen>
+
+    <dimen name="defaultMargin">16dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="layout_detail_peek_height">72dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+</resources>

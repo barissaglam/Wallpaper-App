@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewState"
+            type="barissaglam.client.wallpaperapp.view.categoryview.CategoryViewItem" />
+    </data>
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_item_category"
+        android:button="@null"
+        android:paddingBottom="@dimen/_8dp"
+        android:paddingEnd="@dimen/_12dp"
+        android:paddingStart="@dimen/_12dp"
+        android:paddingTop="@dimen/_8dp"
+        android:tag="@{viewState.tag}"
+        android:text="@{viewState.category.name}"
+        android:textColor="@drawable/text_color_item_category"
+        tools:text="Animals" />
+
+</layout>
